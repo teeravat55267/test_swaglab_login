@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.5 on win32)" generated="2025-07-09T23:10:22.596577" rpa="false" schemaversion="5">
+<suite id="s1" name="Logintestcase" source="C:\Users\hello\Desktop\robotframework\test_swaglab\testcase\Logintestcase.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-07-09T23:10:22.757028" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<arg>${baseUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-09T23:10:22.756854" elapsed="2.332252"/>
+</kw>
+<test id="s1-t1" name="As a user, I want to login success with valid credential" line="13">
+<kw name="when user login to swaglab platform with ${username} and ${invalid_password}" owner="LoginKeywords" source_name="user login to swaglab platform with ${username} and ${password}">
+<kw name="Wait until element is ready then input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-09T23:10:25.092316" level="INFO">Typing text 'tretee55267' into text field 'id=user-name'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-09T23:10:25.091904" elapsed="0.059207"/>
+</kw>
+<arg>2x</arg>
+<arg>3s</arg>
+<arg>Input text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-07-09T23:10:25.091576" elapsed="0.059620"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-09T23:10:27.152114" level="INFO">Slept 2 seconds.</msg>
+<arg>${slow}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-09T23:10:25.151305" elapsed="2.001584"/>
+</kw>
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2025-07-09T23:10:25.091148" elapsed="2.062614"/>
+</kw>
+<kw name="Wait until element is ready then input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-09T23:10:27.157767" level="INFO">Typing text 'sdjfbguijsahbf' into text field 'id=password'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-09T23:10:27.157551" elapsed="0.061486"/>
+</kw>
+<arg>2x</arg>
+<arg>3s</arg>
+<arg>Input text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-07-09T23:10:27.157347" elapsed="0.061762"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-09T23:10:29.219748" level="INFO">Slept 2 seconds.</msg>
+<arg>${slow}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-09T23:10:27.219211" elapsed="2.000914"/>
+</kw>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-07-09T23:10:27.155288" elapsed="2.065245"/>
+</kw>
+<kw name="Wait until element is ready then click element" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-09T23:10:29.222743" level="INFO">Clicking element 'xpath=//input[@id="login-button"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-09T23:10:29.222369" elapsed="0.044812"/>
+</kw>
+<arg>4x</arg>
+<arg>5s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-07-09T23:10:29.221956" elapsed="0.045293"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-09T23:10:31.268319" level="INFO">Slept 2 seconds.</msg>
+<arg>${slow}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-09T23:10:29.267353" elapsed="2.001701"/>
+</kw>
+<arg>xpath=//input[@id="login-button"]</arg>
+<status status="PASS" start="2025-07-09T23:10:29.221152" elapsed="2.048661"/>
+</kw>
+<status status="PASS" start="2025-07-09T23:10:25.090524" elapsed="6.179880"/>
+</kw>
+<status status="PASS" start="2025-07-09T23:10:25.089470" elapsed="6.182718"/>
+</test>
+<test id="s1-t2" name="As a user, I fail to login with invalid credential" line="17">
+<kw name="When user login to swaglab platform with ${username1} and ${valid_password}" owner="LoginKeywords" source_name="user login to swaglab platform with ${username} and ${password}">
+<kw name="Wait until element is ready then input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-09T23:10:31.285368" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-09T23:10:31.284879" elapsed="0.054674"/>
+</kw>
+<arg>2x</arg>
+<arg>3s</arg>
+<arg>Input text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-07-09T23:10:31.284382" elapsed="0.055245"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-09T23:10:33.340080" level="INFO">Slept 2 seconds.</msg>
+<arg>${slow}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-09T23:10:31.339729" elapsed="2.000669"/>
+</kw>
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2025-07-09T23:10:31.282099" elapsed="2.058663"/>
+</kw>
+<kw name="Wait until element is ready then input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-09T23:10:33.344224" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-09T23:10:33.343435" elapsed="0.061992"/>
+</kw>
+<arg>2x</arg>
+<arg>3s</arg>
+<arg>Input text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-07-09T23:10:33.342663" elapsed="0.062881"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-09T23:10:35.406486" level="INFO">Slept 2 seconds.</msg>
+<arg>${slow}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-09T23:10:33.405732" elapsed="2.001245"/>
+</kw>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-07-09T23:10:33.341401" elapsed="2.066128"/>
+</kw>
+<kw name="Wait until element is ready then click element" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-09T23:10:35.412285" level="INFO">Clicking element 'xpath=//input[@id="login-button"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-09T23:10:35.411737" elapsed="0.121036"/>
+</kw>
+<arg>4x</arg>
+<arg>5s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-07-09T23:10:35.410470" elapsed="0.122433"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-09T23:10:37.533900" level="INFO">Slept 2 seconds.</msg>
+<arg>${slow}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-09T23:10:35.533087" elapsed="2.001399"/>
+</kw>
+<arg>xpath=//input[@id="login-button"]</arg>
+<status status="PASS" start="2025-07-09T23:10:35.408539" elapsed="2.126588"/>
+</kw>
+<status status="PASS" start="2025-07-09T23:10:31.280233" elapsed="6.256012"/>
+</kw>
+<kw name="Then swaglab should display display validate login fail message as &quot;Epic sadface: Username and password do not match any user in this service&quot;" owner="LoginKeywords" source_name="swaglab should display display validate login fail message as &quot;${expected_message}&quot;">
+<kw name="Wait until page contains element then verify text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-09T23:10:37.659891" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-09T23:10:37.660012" level="FAIL">Page should have contained text 'Epic sadface: Username and password do not match any user in this service' but did not.</msg>
+<arg>${expected_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-07-09T23:10:37.541075" elapsed="0.120040">Page should have contained text 'Epic sadface: Username and password do not match any user in this service' but did not.</status>
+</kw>
+<msg time="2025-07-09T23:10:37.661220" level="FAIL">Keyword 'Page Should Contain' failed after retrying 1 time. The last error was: Page should have contained text 'Epic sadface: Username and password do not match any user in this service' but did not.</msg>
+<arg>1x</arg>
+<arg>5s</arg>
+<arg>Page Should Contain</arg>
+<arg>${expected_text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="FAIL" start="2025-07-09T23:10:37.540429" elapsed="0.121167">Keyword 'Page Should Contain' failed after retrying 1 time. The last error was: Page should have contained text 'Epic sadface: Username and password do not match any user in this service' but did not.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${slow}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-07-09T23:10:37.661717" elapsed="0.000023"/>
+</kw>
+<arg>${expected_message}</arg>
+<status status="FAIL" start="2025-07-09T23:10:37.539389" elapsed="0.122423">Keyword 'Page Should Contain' failed after retrying 1 time. The last error was: Page should have contained text 'Epic sadface: Username and password do not match any user in this service' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-07-09T23:10:37.538010" elapsed="0.123856">Keyword 'Page Should Contain' failed after retrying 1 time. The last error was: Page should have contained text 'Epic sadface: Username and password do not match any user in this service' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-07-09T23:10:31.277040" elapsed="6.385022">Keyword 'Page Should Contain' failed after retrying 1 time. The last error was: Page should have contained text 'Epic sadface: Username and password do not match any user in this service' but did not.</status>
+</test>
+<test id="s1-t3" name="user want shopping to product" line="21">
+<kw name="Wait until element is ready then Click Button" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-09T23:10:37.663231" level="INFO">Clicking element 'xpath=//button[contains(@class, 'btn_inventory') and normalize-space(text())='ADD TO CART']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-09T23:10:37.663117" elapsed="0.032190"/>
+</kw>
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-07-09T23:10:37.663008" elapsed="0.032371"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-09T23:10:39.695917" level="INFO">Slept 2 seconds.</msg>
+<arg>${slow}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-09T23:10:37.695483" elapsed="2.001026"/>
+</kw>
+<arg>xpath=//button[contains(@class, 'btn_inventory') and normalize-space(text())='ADD TO CART']</arg>
+<status status="PASS" start="2025-07-09T23:10:37.662840" elapsed="2.034283"/>
+</kw>
+<status status="PASS" start="2025-07-09T23:10:37.662596" elapsed="2.036272"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-09T23:10:39.704115" elapsed="2.123870"/>
+</kw>
+<status status="FAIL" start="2025-07-09T23:10:22.597334" elapsed="19.230756"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Logintestcase" id="s1" pass="2" fail="1" skip="0">Logintestcase</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-09T23:10:22.754796" level="ERROR">Error in file 'C:\Users\hello\Desktop\robotframework\test_swaglab\testcase\Logintestcase.robot' on line 5: Resource file '..\CommonKeywords\HomepageKeywords.robot' does not exist.</msg>
+</errors>
+</robot>
