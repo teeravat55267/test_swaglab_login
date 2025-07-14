@@ -6,7 +6,7 @@ Variables  ../Resources/config/config.yaml
 Variables  ../Resources/testdata.yaml
 Suite Setup   Open Browser    ${baseUrl}    chrome
 Suite Teardown   Close Browser 
-####asjhdgfkasbd
+
 
 *** Test Cases ***
 As a user, I want to login success with valid credential
